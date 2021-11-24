@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47297B7D274A2E95002D8E00 /* Digital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47297B7C274A2E95002D8E00 /* Digital.swift */; };
+		47297B82274CF5AE002D8E00 /* SwiftyGif in Frameworks */ = {isa = PBXBuildFile; productRef = 47297B81274CF5AE002D8E00 /* SwiftyGif */; };
+		47297B85274CF9F0002D8E00 /* SwiftImage in Frameworks */ = {isa = PBXBuildFile; productRef = 47297B84274CF9F0002D8E00 /* SwiftImage */; };
+		47297B88274CFCA3002D8E00 /* DraggableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47297B87274CFCA3002D8E00 /* DraggableImageView.swift */; };
+		47297B8A274E39F8002D8E00 /* AnalogPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47297B89274E39F8002D8E00 /* AnalogPreviewController.swift */; };
 		475FCCD02746637B002A2C02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475FCCCF2746637B002A2C02 /* AppDelegate.swift */; };
 		475FCCD22746637B002A2C02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475FCCD12746637B002A2C02 /* ViewController.swift */; };
 		475FCCD42746637C002A2C02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 475FCCD32746637C002A2C02 /* Assets.xcassets */; };
@@ -14,6 +19,13 @@
 		475FCCE22746637C002A2C02 /* CustomizableTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475FCCE12746637C002A2C02 /* CustomizableTimerTests.swift */; };
 		475FCCEC2746637C002A2C02 /* CustomizableTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475FCCEB2746637C002A2C02 /* CustomizableTimerUITests.swift */; };
 		475FCCEE2746637C002A2C02 /* CustomizableTimerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475FCCED2746637C002A2C02 /* CustomizableTimerUITestsLaunchTests.swift */; };
+		475FCCFF27466B1E002A2C02 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475FCCFE27466B1E002A2C02 /* Preferences.storyboard */; };
+		475FCD032746835E002A2C02 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475FCD022746835E002A2C02 /* GeneralViewController.swift */; };
+		475FCD0527468370002A2C02 /* AnalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475FCD0427468370002A2C02 /* AnalogViewController.swift */; };
+		475FCD0727468380002A2C02 /* DigitalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475FCD0627468380002A2C02 /* DigitalViewController.swift */; };
+		475FCD092746886D002A2C02 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475FCD082746886D002A2C02 /* TabViewController.swift */; };
+		475FCD0B27489935002A2C02 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475FCD0A27489935002A2C02 /* General.swift */; };
+		475FCD0F2748C5F8002A2C02 /* Analog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475FCD0E2748C5F8002A2C02 /* Analog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		47297B7C274A2E95002D8E00 /* Digital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digital.swift; sourceTree = "<group>"; };
+		47297B87274CFCA3002D8E00 /* DraggableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableImageView.swift; sourceTree = "<group>"; };
+		47297B89274E39F8002D8E00 /* AnalogPreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogPreviewController.swift; sourceTree = "<group>"; };
 		475FCCCC2746637B002A2C02 /* CustomizableTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomizableTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		475FCCCF2746637B002A2C02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		475FCCD12746637B002A2C02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +60,14 @@
 		475FCCE72746637C002A2C02 /* CustomizableTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomizableTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		475FCCEB2746637C002A2C02 /* CustomizableTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizableTimerUITests.swift; sourceTree = "<group>"; };
 		475FCCED2746637C002A2C02 /* CustomizableTimerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizableTimerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		475FCCFE27466B1E002A2C02 /* Preferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
+		475FCD022746835E002A2C02 /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
+		475FCD0427468370002A2C02 /* AnalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogViewController.swift; sourceTree = "<group>"; };
+		475FCD0627468380002A2C02 /* DigitalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalViewController.swift; sourceTree = "<group>"; };
+		475FCD082746886D002A2C02 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		475FCD0A27489935002A2C02 /* General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
+		475FCD0E2748C5F8002A2C02 /* Analog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analog.swift; sourceTree = "<group>"; };
+		47CF742E274E50DA00B8C2FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47297B85274CF9F0002D8E00 /* SwiftImage in Frameworks */,
+				47297B82274CF5AE002D8E00 /* SwiftyGif in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47297B86274CFB73002D8E00 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				47297B87274CFCA3002D8E00 /* DraggableImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		475FCCC32746637B002A2C02 = {
 			isa = PBXGroup;
 			children = (
@@ -95,11 +128,15 @@
 		475FCCCE2746637B002A2C02 /* CustomizableTimer */ = {
 			isa = PBXGroup;
 			children = (
+				47CF742E274E50DA00B8C2FC /* Info.plist */,
 				475FCCCF2746637B002A2C02 /* AppDelegate.swift */,
-				475FCCD12746637B002A2C02 /* ViewController.swift */,
 				475FCCD32746637C002A2C02 /* Assets.xcassets */,
 				475FCCD52746637C002A2C02 /* Main.storyboard */,
+				475FCCFE27466B1E002A2C02 /* Preferences.storyboard */,
 				475FCCD82746637C002A2C02 /* CustomizableTimer.entitlements */,
+				475FCCFD27466A23002A2C02 /* Model */,
+				47297B86274CFB73002D8E00 /* View */,
+				475FCCFB27466A0A002A2C02 /* ViewController */,
 			);
 			path = CustomizableTimer;
 			sourceTree = "<group>";
@@ -121,6 +158,29 @@
 			path = CustomizableTimerUITests;
 			sourceTree = "<group>";
 		};
+		475FCCFB27466A0A002A2C02 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				475FCCD12746637B002A2C02 /* ViewController.swift */,
+				475FCD082746886D002A2C02 /* TabViewController.swift */,
+				475FCD022746835E002A2C02 /* GeneralViewController.swift */,
+				475FCD0427468370002A2C02 /* AnalogViewController.swift */,
+				47297B89274E39F8002D8E00 /* AnalogPreviewController.swift */,
+				475FCD0627468380002A2C02 /* DigitalViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		475FCCFD27466A23002A2C02 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				475FCD0A27489935002A2C02 /* General.swift */,
+				475FCD0E2748C5F8002A2C02 /* Analog.swift */,
+				47297B7C274A2E95002D8E00 /* Digital.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +197,10 @@
 			dependencies = (
 			);
 			name = CustomizableTimer;
+			packageProductDependencies = (
+				47297B81274CF5AE002D8E00 /* SwiftyGif */,
+				47297B84274CF9F0002D8E00 /* SwiftImage */,
+			);
 			productName = CustomizableTimer;
 			productReference = 475FCCCC2746637B002A2C02 /* CustomizableTimer.app */;
 			productType = "com.apple.product-type.application";
@@ -209,6 +273,10 @@
 				Base,
 			);
 			mainGroup = 475FCCC32746637B002A2C02;
+			packageReferences = (
+				47297B80274CF5AE002D8E00 /* XCRemoteSwiftPackageReference "SwiftyGif" */,
+				47297B83274CF9F0002D8E00 /* XCRemoteSwiftPackageReference "swift-image" */,
+			);
 			productRefGroup = 475FCCCD2746637B002A2C02 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -225,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				475FCCFF27466B1E002A2C02 /* Preferences.storyboard in Resources */,
 				475FCCD42746637C002A2C02 /* Assets.xcassets in Resources */,
 				475FCCD72746637C002A2C02 /* Main.storyboard in Resources */,
 			);
@@ -251,7 +320,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47297B8A274E39F8002D8E00 /* AnalogPreviewController.swift in Sources */,
+				475FCD092746886D002A2C02 /* TabViewController.swift in Sources */,
+				475FCD0F2748C5F8002A2C02 /* Analog.swift in Sources */,
+				47297B7D274A2E95002D8E00 /* Digital.swift in Sources */,
+				475FCD032746835E002A2C02 /* GeneralViewController.swift in Sources */,
 				475FCCD22746637B002A2C02 /* ViewController.swift in Sources */,
+				475FCD0527468370002A2C02 /* AnalogViewController.swift in Sources */,
+				47297B88274CFCA3002D8E00 /* DraggableImageView.swift in Sources */,
+				475FCD0727468380002A2C02 /* DigitalViewController.swift in Sources */,
+				475FCD0B27489935002A2C02 /* General.swift in Sources */,
 				475FCCD02746637B002A2C02 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +415,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -398,6 +477,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -426,7 +506,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9B9T932RXM;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_ON_DEMAND_RESOURCES = NO;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CustomizableTimer/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -437,6 +520,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.b150005.CustomizableTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -453,7 +537,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9B9T932RXM;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_ON_DEMAND_RESOURCES = NO;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CustomizableTimer/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -464,6 +551,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.b150005.CustomizableTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -605,6 +693,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		47297B80274CF5AE002D8E00 /* XCRemoteSwiftPackageReference "SwiftyGif" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kirualex/SwiftyGif";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		47297B83274CF9F0002D8E00 /* XCRemoteSwiftPackageReference "swift-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/koher/swift-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		47297B81274CF5AE002D8E00 /* SwiftyGif */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 47297B80274CF5AE002D8E00 /* XCRemoteSwiftPackageReference "SwiftyGif" */;
+			productName = SwiftyGif;
+		};
+		47297B84274CF9F0002D8E00 /* SwiftImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 47297B83274CF9F0002D8E00 /* XCRemoteSwiftPackageReference "swift-image" */;
+			productName = SwiftImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 475FCCC42746637B002A2C02 /* Project object */;
 }
