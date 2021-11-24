@@ -68,6 +68,7 @@
 		475FCD0A27489935002A2C02 /* General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
 		475FCD0E2748C5F8002A2C02 /* Analog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analog.swift; sourceTree = "<group>"; };
 		47CF742E274E50DA00B8C2FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		47CF742F274E8B8500B8C2FC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +109,7 @@
 		475FCCC32746637B002A2C02 = {
 			isa = PBXGroup;
 			children = (
+				47CF742F274E8B8500B8C2FC /* README.md */,
 				475FCCCE2746637B002A2C02 /* CustomizableTimer */,
 				475FCCE02746637C002A2C02 /* CustomizableTimerTests */,
 				475FCCEA2746637C002A2C02 /* CustomizableTimerUITests */,
