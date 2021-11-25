@@ -23,34 +23,53 @@ class AnalogPreviewController: NSViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    // プレビューの読込
+    // プレビューの描画
     self.reloadAnalogPreview()
   }
 }
 
 extension AnalogPreviewController {
-  /// プレビューの読込
+  /// プレビューの描画
   func reloadAnalogPreview() {
     // アナログ時計
     self.reloadClock()
+    // アニメーション
+    self.reloadAnimation()
   }
   
+  // MARK: - アナログ時計
   /// アナログ時計の描画
   private func reloadClock() {
+    // 画像ファイル
+    self.reloadClockImage()
+    // アニメーション
+  }
+  
+  /// アナログ時計の画像ファイル(時計盤・短針・長針・秒針)の読込(針は回転した状態で描画)
+  private func reloadClockImage() {
+    var image: NSImage
+    let degree = Degree()
+    print(degree.hDeg, degree.mDeg, degree.sDeg)
+    
     if let faceUrl = analog.faceFilePath {
-      faceImageView.setGifFromURL(faceUrl)
+      self.faceImageView.image = NSImage(byReferencing: faceUrl)
     }
     if let hourUrl = analog.hourFilePath {
-      hourImageView.setGifFromURL(hourUrl)
+      image = NSImage(byReferencing: hourUrl)
+      self.hourImageView.image = image.rotated(by: degree.hDeg)
     }
     if let minuteUrl = analog.minuteFilePath {
-      minuteImageView.setGifFromURL(minuteUrl)
+      image = NSImage(byReferencing: minuteUrl)
+      self.minuteImageView.image = image.rotated(by: degree.mDeg)
     }
     if let secondUrl = analog.secondFilePath {
-      secondImageView.setGifFromURL(secondUrl)
+      image = NSImage(byReferencing: secondUrl)
+      self.secondImageView.image = image.rotated(by: degree.sDeg)
     }
   }
   
+  // MARK: - アニメーション
+  /// アニメーションの描画
   private func reloadAnimation() {
     
   }
