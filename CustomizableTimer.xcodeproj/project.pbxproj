@@ -26,8 +26,9 @@
 		475FCD092746886D002A2C02 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475FCD082746886D002A2C02 /* TabViewController.swift */; };
 		475FCD0B27489935002A2C02 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475FCD0A27489935002A2C02 /* General.swift */; };
 		475FCD0F2748C5F8002A2C02 /* Analog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475FCD0E2748C5F8002A2C02 /* Analog.swift */; };
-		47CF7431274FA9B600B8C2FC /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF7430274FA9B600B8C2FC /* Degree.swift */; };
+		47CF7431274FA9B600B8C2FC /* Degree+TimeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF7430274FA9B600B8C2FC /* Degree+TimeUnit.swift */; };
 		47CF7433274FC88D00B8C2FC /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF7432274FC88D00B8C2FC /* NSImage.swift */; };
+		47CF7435274FD02200B8C2FC /* NSImageView+NSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF7434274FD02200B8C2FC /* NSImageView+NSView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +72,9 @@
 		475FCD0E2748C5F8002A2C02 /* Analog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analog.swift; sourceTree = "<group>"; };
 		47CF742E274E50DA00B8C2FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		47CF742F274E8B8500B8C2FC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		47CF7430274FA9B600B8C2FC /* Degree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Degree.swift; sourceTree = "<group>"; };
+		47CF7430274FA9B600B8C2FC /* Degree+TimeUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Degree+TimeUnit.swift"; sourceTree = "<group>"; };
 		47CF7432274FC88D00B8C2FC /* NSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImage.swift; sourceTree = "<group>"; };
+		47CF7434274FD02200B8C2FC /* NSImageView+NSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImageView+NSView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,9 +184,10 @@
 			children = (
 				475FCD0A27489935002A2C02 /* General.swift */,
 				475FCD0E2748C5F8002A2C02 /* Analog.swift */,
-				47CF7430274FA9B600B8C2FC /* Degree.swift */,
+				47CF7430274FA9B600B8C2FC /* Degree+TimeUnit.swift */,
 				47297B7C274A2E95002D8E00 /* Digital.swift */,
 				47CF7432274FC88D00B8C2FC /* NSImage.swift */,
+				47CF7434274FD02200B8C2FC /* NSImageView+NSView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -328,7 +331,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47CF7431274FA9B600B8C2FC /* Degree.swift in Sources */,
+				47CF7431274FA9B600B8C2FC /* Degree+TimeUnit.swift in Sources */,
+				47CF7435274FD02200B8C2FC /* NSImageView+NSView.swift in Sources */,
 				47297B8A274E39F8002D8E00 /* AnalogPreviewController.swift in Sources */,
 				475FCD092746886D002A2C02 /* TabViewController.swift in Sources */,
 				475FCD0F2748C5F8002A2C02 /* Analog.swift in Sources */,

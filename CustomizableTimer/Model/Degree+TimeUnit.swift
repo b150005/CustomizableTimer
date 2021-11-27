@@ -1,5 +1,5 @@
 //
-//  Degree.swift
+//  Degree+TimeUnit.swift
 //  CustomizableTimer
 //
 //  Created by 伊藤 直輝 on 2021/11/25.
@@ -18,13 +18,6 @@ struct Degree {
     hDeg = self.getDegrees(.Hour, date)
     mDeg = self.getDegrees(.Minute, date)
     sDeg = self.getDegrees(.Second, date)
-  }
-  
-  /// 時・分・秒を表す列挙型
-  private enum TimeUnit {
-    case Hour
-    case Minute
-    case Second
   }
   
   /// 現在時刻に基づく各時針の回転角度の取得
@@ -46,4 +39,12 @@ struct Degree {
       return second / 60 * 360
     }
   }
+}
+
+/// 時・分・秒を表す列挙型
+/// → 各ケースは時計の針が1周するのにかかる時間[秒]を保持する
+enum TimeUnit: Double {
+  case Hour = 43200
+  case Minute = 3600
+  case Second = 60
 }

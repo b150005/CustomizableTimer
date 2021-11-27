@@ -22,14 +22,16 @@ class AnalogPreviewController: NSViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    // プレビューの描画
+    }
+  
+  override func viewDidAppear() {
+    // アナログ時計プレビューの読込
     self.reloadAnalogPreview()
   }
 }
 
 extension AnalogPreviewController {
-  /// プレビューの描画
+  /// アナログ時計のプレビューの描画
   func reloadAnalogPreview() {
     // アナログ時計
     self.reloadClock()
@@ -40,16 +42,17 @@ extension AnalogPreviewController {
   // MARK: - アナログ時計
   /// アナログ時計の描画
   private func reloadClock() {
-    // 画像ファイル
+    // 画像ファイルの読込
     self.reloadClockImage()
-    // アニメーション
+    // 回転アニメーションの開始
+    self.startClockAnimation()
   }
   
-  /// アナログ時計の画像ファイル(時計盤・短針・長針・秒針)の読込(針は回転した状態で描画)
+  /// アナログ時計の画像ファイル(時計盤・短針・長針・秒針)の読込
+  /// → 針は回転した状態で描画
   private func reloadClockImage() {
     var image: NSImage
     let degree = Degree()
-    print(degree.hDeg, degree.mDeg, degree.sDeg)
     
     if let faceUrl = analog.faceFilePath {
       self.faceImageView.image = NSImage(byReferencing: faceUrl)
@@ -66,6 +69,13 @@ extension AnalogPreviewController {
       image = NSImage(byReferencing: secondUrl)
       self.secondImageView.image = image.rotated(by: degree.sDeg)
     }
+  }
+  
+  /// アナログ時計の回転アニメーションの開始
+  private func startClockAnimation() {
+    self.hourImageView.spinClockwise(TimeUnit.Hour.rawValue)
+    self.minuteImageView.spinClockwise(TimeUnit.Minute.rawValue)
+    self.secondImageView.spinClockwise(TimeUnit.Second.rawValue)
   }
   
   // MARK: - アニメーション
