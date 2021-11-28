@@ -41,20 +41,4 @@ extension NSView {
     // frameの表示位置(position)を元の位置に変更
     layer.frame.origin = origin
   }
-  
-  func bringSubviewToFront(_ view: NSView) {
-    var broughtView = view
-    self.sortSubviews({(viewA, viewB, rawPointer) in
-      let view = rawPointer?.load(as: NSView.self)
-      
-      switch view {
-      case viewA:
-        return ComparisonResult.orderedDescending
-      case viewB:
-        return ComparisonResult.orderedAscending
-      default:
-        return ComparisonResult.orderedSame
-      }
-    }, context: &broughtView)
-  }
 }

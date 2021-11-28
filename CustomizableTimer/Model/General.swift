@@ -114,7 +114,7 @@ class General {
 
 enum AnimationTiming: String {
   case always = "常時"
-  case designated = "指定時"
+  case specified = "指定時"
 }
 
 extension UserDefaults {

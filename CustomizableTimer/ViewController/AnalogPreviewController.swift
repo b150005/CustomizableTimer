@@ -116,7 +116,7 @@ extension AnalogPreviewController {
         switch self.general.frontAnimationTiming {
         case .always:
           self.frontAnimationImageView.setGifFromURL(url)
-        case .designated:
+        case .specified:
           print("")
         }
       }
@@ -130,7 +130,7 @@ extension AnalogPreviewController {
         switch self.general.backAnimationTiming {
         case .always:
           self.backAnimationImageView.setGifFromURL(url)
-        case .designated:
+        case .specified:
           print("")
         }
       }
@@ -141,12 +141,16 @@ extension AnalogPreviewController {
     }
   }
   
+  private func showAnimationAtSpecifiedTime() {
+    
+  }
+  
   /// AnimationTimingをもとにGIFアニメーションのループ回数を設定
   /// - Parameter timing: `AnimationTiming`
   private func getLoopCount(_ timing: AnimationTiming) -> Int {
     switch timing {
     case .always: return -1
-    case .designated: return 1
+    case .specified: return 1
     }
   }
 }

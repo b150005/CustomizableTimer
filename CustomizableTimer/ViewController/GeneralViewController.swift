@@ -47,7 +47,7 @@ class GeneralViewController: NSViewController {
     let timing: AnimationTiming
     switch sender.indexOfSelectedItem {
     case 0: timing = .always
-    case 1: timing = .designated
+    case 1: timing = .specified
     default: return
     }
     
@@ -78,7 +78,7 @@ class GeneralViewController: NSViewController {
     self.reloadTextField()
   }
   
-  @IBAction func designateAnimationShowTime(_ sender: NSDatePicker) {
+  @IBAction func specifyAnimationShowTime(_ sender: NSDatePicker) {
     switch sender.tag {
     case 1: general.animationShowTime1 = sender.dateValue
     case 2: general.animationShowTime2 = sender.dateValue
@@ -137,14 +137,14 @@ extension GeneralViewController {
     // MARK: - アニメーション(前面)
     switch general.frontAnimationTiming {
     case AnimationTiming.always: frontAnimationTimingComboBox.selectItem(at: 0)
-    case AnimationTiming.designated:
+    case AnimationTiming.specified:
       frontAnimationTimingComboBox.selectItem(at: 1)
     }
     // MARK: - アニメーション(背面)
     switch general.backAnimationTiming {
     case AnimationTiming.always:
       backAnimationTimingComboBox.selectItem(at: 0)
-    case AnimationTiming.designated:
+    case AnimationTiming.specified:
       backAnimationTimingComboBox.selectItem(at: 1)
     }
   }
