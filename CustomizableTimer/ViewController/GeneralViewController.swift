@@ -21,10 +21,15 @@ class GeneralViewController: NSViewController {
   @IBOutlet weak var backAnimationFilePathTextField: NSTextField!
   // MARK: - アニメーション表示時刻
   @IBOutlet weak var animationShowTime1DatePicker: NSDatePicker!
+  @IBOutlet weak var showTime1Switch: NSSwitch!
   @IBOutlet weak var animationShowTime2DatePicker: NSDatePicker!
+  @IBOutlet weak var showTime2Switch: NSSwitch!
   @IBOutlet weak var animationShowTime3DatePicker: NSDatePicker!
+  @IBOutlet weak var showTime3Switch: NSSwitch!
   @IBOutlet weak var animationShowTimer4DatePicker: NSDatePicker!
+  @IBOutlet weak var showTime4Switch: NSSwitch!
   @IBOutlet weak var animationShowTime5DatePicker: NSDatePicker!
+  @IBOutlet weak var showTime5Switch: NSSwitch!
   
   let general: General = General.shared
   
@@ -88,6 +93,17 @@ class GeneralViewController: NSViewController {
     default: return
     }
   }
+  
+  @IBAction func toggleShowAnimationAtSpecifiedTime(_ sender: NSSwitch) {
+    switch sender.tag {
+    case 1: general.showBackAtShowTime1.toggle()
+    case 2: general.showBackAtShowTime2.toggle()
+    case 3: general.showBackAtShowTime3.toggle()
+    case 4: general.showBackAtShowTime4.toggle()
+    case 5: general.showBackAtShowTime5.toggle()
+    default: return
+    }
+  }
 }
 
 extension NSViewController {
@@ -130,6 +146,12 @@ extension GeneralViewController {
     frontAnimationSwitch.state = general.showFrontAnimation ? .on : .off
     // MARK: - アニメーション(背面)
     backAnimationSwitch.state = general.showBackAnimation ? .on : .off
+    // MARK: - アニメーション表示時刻
+    showTime1Switch.state = general.showBackAtShowTime1 ? .on : .off
+    showTime2Switch.state = general.showBackAtShowTime2 ? .on : .off
+    showTime3Switch.state = general.showBackAtShowTime3 ? .on : .off
+    showTime4Switch.state = general.showBackAtShowTime4 ? .on : .off
+    showTime5Switch.state = general.showBackAtShowTime5 ? .on : .off
   }
   
   /// ComboBoxの初期化

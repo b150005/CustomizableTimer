@@ -36,11 +36,11 @@ class AnalogPreviewController: NSViewController, SwiftyGifDelegate {
   }
   
   override func viewWillDisappear() {
-    self.stopTimer()
+    self.stopCurrentTimer()
   }
   
   /// Timerオブジェクトの解放
-  private func stopTimer() {
+  private func stopCurrentTimer() {
     if let timer = self.timer {
       timer.invalidate()
       self.timer = nil
@@ -139,10 +139,6 @@ extension AnalogPreviewController {
       // ImageViewの初期化
       self.backAnimationImageView.clear()
     }
-  }
-  
-  private func showAnimationAtSpecifiedTime() {
-    
   }
   
   /// AnimationTimingをもとにGIFアニメーションのループ回数を設定

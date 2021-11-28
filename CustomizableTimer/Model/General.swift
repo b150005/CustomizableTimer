@@ -23,10 +23,15 @@ class General {
     case backAnimationFilePath
     // MARK: - アニメーション表示時刻
     case animationShowTime1
+    case showBackAtShowTime1
     case animationShowTime2
+    case showBackAtShowTime2
     case animationShowTime3
+    case showBackAtShowTime3
     case animationShowTime4
+    case showBackAtShowTime4
     case animationShowTime5
+    case showBackAtShowTime5
   }
 
   private let userDefaults = UserDefaults.standard
@@ -47,10 +52,15 @@ class General {
       UserDefaultsKeyGeneral.showBackAnimation.rawValue : false,
       // MARK: - アニメーション表示時刻
       UserDefaultsKeyGeneral.animationShowTime1.rawValue : Date(),
+      UserDefaultsKeyGeneral.showBackAtShowTime1.rawValue : false,
       UserDefaultsKeyGeneral.animationShowTime2.rawValue : Date(),
+      UserDefaultsKeyGeneral.showBackAtShowTime2.rawValue : false,
       UserDefaultsKeyGeneral.animationShowTime3.rawValue : Date(),
+      UserDefaultsKeyGeneral.showBackAtShowTime3.rawValue : false,
       UserDefaultsKeyGeneral.animationShowTime4.rawValue : Date(),
+      UserDefaultsKeyGeneral.showBackAtShowTime4.rawValue : false,
       UserDefaultsKeyGeneral.animationShowTime5.rawValue : Date(),
+      UserDefaultsKeyGeneral.showBackAtShowTime5.rawValue : false,
     ])
   }
   
@@ -94,21 +104,41 @@ class General {
     get { return userDefaults.date(forKey: UserDefaultsKeyGeneral.animationShowTime1.rawValue) }
     set { userDefaults.set(newValue, forKey: UserDefaultsKeyGeneral.animationShowTime1.rawValue) }
   }
+  var showBackAtShowTime1: Bool {
+    get { return userDefaults.bool(forKey: UserDefaultsKeyGeneral.showBackAtShowTime1.rawValue) }
+    set { userDefaults.set(newValue, forKey: UserDefaultsKeyGeneral.showBackAtShowTime1.rawValue) }
+  }
   var animationShowTime2: Date {
     get { return userDefaults.date(forKey: UserDefaultsKeyGeneral.animationShowTime2.rawValue) }
     set { userDefaults.set(newValue, forKey: UserDefaultsKeyGeneral.animationShowTime2.rawValue) }
+  }
+  var showBackAtShowTime2: Bool {
+    get { return userDefaults.bool(forKey: UserDefaultsKeyGeneral.showBackAtShowTime2.rawValue) }
+    set { userDefaults.set(newValue, forKey: UserDefaultsKeyGeneral.showBackAtShowTime2.rawValue) }
   }
   var animationShowTime3: Date {
     get { return userDefaults.date(forKey: UserDefaultsKeyGeneral.animationShowTime3.rawValue) }
     set { userDefaults.set(newValue, forKey: UserDefaultsKeyGeneral.animationShowTime3.rawValue) }
   }
+  var showBackAtShowTime3: Bool {
+    get { return userDefaults.bool(forKey: UserDefaultsKeyGeneral.showBackAtShowTime3.rawValue) }
+    set { userDefaults.set(newValue, forKey: UserDefaultsKeyGeneral.showBackAtShowTime3.rawValue) }
+  }
   var animationShowTime4: Date {
     get { return userDefaults.date(forKey: UserDefaultsKeyGeneral.animationShowTime4.rawValue) }
     set { userDefaults.set(newValue, forKey: UserDefaultsKeyGeneral.animationShowTime4.rawValue) }
   }
+  var showBackAtShowTime4: Bool {
+    get { return userDefaults.bool(forKey: UserDefaultsKeyGeneral.showBackAtShowTime4.rawValue) }
+    set { userDefaults.set(newValue, forKey: UserDefaultsKeyGeneral.showBackAtShowTime4.rawValue) }
+  }
   var animationShowTime5: Date {
     get { return userDefaults.date(forKey: UserDefaultsKeyGeneral.animationShowTime5.rawValue) }
     set { userDefaults.set(newValue, forKey: UserDefaultsKeyGeneral.animationShowTime5.rawValue) }
+  }
+  var showBackAtShowTime5: Bool {
+    get { return userDefaults.bool(forKey: UserDefaultsKeyGeneral.showBackAtShowTime5.rawValue) }
+    set { userDefaults.set(newValue, forKey: UserDefaultsKeyGeneral.showBackAtShowTime5.rawValue) }
   }
 }
 

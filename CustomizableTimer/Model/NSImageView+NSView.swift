@@ -24,6 +24,10 @@ extension NSImageView {
     self.layer?.add(rotateAnimation, forKey: nil)
   }
   
+  private func showAnimationAtSpecifiedTime() {
+    
+  }
+  
   /// アニメーションの停止
   func stopAnimations() {
     self.layer?.removeAllAnimations()
