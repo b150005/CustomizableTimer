@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		47297B7D274A2E95002D8E00 /* Digital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47297B7C274A2E95002D8E00 /* Digital.swift */; };
 		47297B82274CF5AE002D8E00 /* SwiftyGif in Frameworks */ = {isa = PBXBuildFile; productRef = 47297B81274CF5AE002D8E00 /* SwiftyGif */; };
-		47297B85274CF9F0002D8E00 /* SwiftImage in Frameworks */ = {isa = PBXBuildFile; productRef = 47297B84274CF9F0002D8E00 /* SwiftImage */; };
 		47297B88274CFCA3002D8E00 /* DraggableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47297B87274CFCA3002D8E00 /* DraggableImageView.swift */; };
 		47297B8A274E39F8002D8E00 /* AnalogPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47297B89274E39F8002D8E00 /* AnalogPreviewController.swift */; };
 		475FCCD02746637B002A2C02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475FCCCF2746637B002A2C02 /* AppDelegate.swift */; };
@@ -82,7 +81,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47297B85274CF9F0002D8E00 /* SwiftImage in Frameworks */,
 				47297B82274CF5AE002D8E00 /* SwiftyGif in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,7 +208,6 @@
 			name = CustomizableTimer;
 			packageProductDependencies = (
 				47297B81274CF5AE002D8E00 /* SwiftyGif */,
-				47297B84274CF9F0002D8E00 /* SwiftImage */,
 			);
 			productName = CustomizableTimer;
 			productReference = 475FCCCC2746637B002A2C02 /* CustomizableTimer.app */;
@@ -286,7 +283,6 @@
 			mainGroup = 475FCCC32746637B002A2C02;
 			packageReferences = (
 				47297B80274CF5AE002D8E00 /* XCRemoteSwiftPackageReference "SwiftyGif" */,
-				47297B83274CF9F0002D8E00 /* XCRemoteSwiftPackageReference "swift-image" */,
 			);
 			productRefGroup = 475FCCCD2746637B002A2C02 /* Products */;
 			projectDirPath = "";
@@ -717,14 +713,6 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		47297B83274CF9F0002D8E00 /* XCRemoteSwiftPackageReference "swift-image" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/koher/swift-image";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.7.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -732,11 +720,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 47297B80274CF5AE002D8E00 /* XCRemoteSwiftPackageReference "SwiftyGif" */;
 			productName = SwiftyGif;
-		};
-		47297B84274CF9F0002D8E00 /* SwiftImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 47297B83274CF9F0002D8E00 /* XCRemoteSwiftPackageReference "swift-image" */;
-			productName = SwiftImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

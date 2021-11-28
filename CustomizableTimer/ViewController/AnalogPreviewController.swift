@@ -8,25 +8,55 @@
 import Cocoa
 import SwiftyGif
 
-class AnalogPreviewController: NSViewController {
+class AnalogPreviewController: NSViewController, SwiftyGifDelegate {
   // ImageView
   @IBOutlet weak var faceImageView: NSImageView!
   @IBOutlet weak var hourImageView: NSImageView!
   @IBOutlet weak var minuteImageView: NSImageView!
   @IBOutlet weak var secondImageView: NSImageView!
-  @IBOutlet weak var animation1ImageView: NSImageView!
-  @IBOutlet weak var animation2ImageView: NSImageView!
+  @IBOutlet weak var frontAnimationImageView: NSImageView!
+  @IBOutlet weak var backAnimationImageView: NSImageView!
   
   let general: General = General.shared
   let analog: Analog = Analog.shared
   
+  var timer: Timer?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.frontAnimationImageView.delegate = self
+    self.backAnimationImageView.delegate = self
     }
   
   override func viewDidAppear() {
+    // アニメーションのレイヤー階層の変更
+    self.setAnimationLayer()
     // アナログ時計プレビューの読込
     self.reloadAnalogPreview()
+  }
+  
+  override func viewWillDisappear() {
+    self.stopTimer()
+  }
+  
+  /// Timerオブジェクトの解放
+  private func stopTimer() {
+    if let timer = self.timer {
+      timer.invalidate()
+      self.timer = nil
+    }
+  }
+  
+  /// アニメーションのレイヤー階層の変更
+  private func setAnimationLayer() {
+    if self.general.showAnimationInFront == true {
+      self.backAnimationImageView.layer?.zPosition = 1
+      self.frontAnimationImageView.layer?.zPosition = 1
+    }
+    else {
+      self.backAnimationImageView.layer?.zPosition = 0
+      self.frontAnimationImageView.layer?.zPosition = 0
+    }
   }
 }
 
@@ -81,7 +111,34 @@ extension AnalogPreviewController {
   // MARK: - アニメーション
   /// アニメーションの描画
   private func reloadAnimation() {
-    
+    if self.general.showFrontAnimation == true {
+      if let url = self.general.frontAnimationFilePath {
+        switch self.general.frontAnimationTiming {
+        case .always:
+          self.frontAnimationImageView.setGifFromURL(url)
+        case .designated:
+          print("")
+        }
+      }
+    }
+    else {
+      // ImageViewの初期化
+      self.frontAnimationImageView.clear()
+    }
+    if self.general.showBackAnimation == true {
+      if let url = self.general.backAnimationFilePath {
+        switch self.general.backAnimationTiming {
+        case .always:
+          self.backAnimationImageView.setGifFromURL(url)
+        case .designated:
+          print("")
+        }
+      }
+    }
+    else {
+      // ImageViewの初期化
+      self.backAnimationImageView.clear()
+    }
   }
   
   /// AnimationTimingをもとにGIFアニメーションのループ回数を設定
@@ -92,4 +149,8 @@ extension AnalogPreviewController {
     case .designated: return 1
     }
   }
+}
+
+extension ViewController: SwiftyGifDelegate {
+  
 }

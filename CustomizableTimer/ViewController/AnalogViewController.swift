@@ -20,8 +20,8 @@ class AnalogViewController: NSViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    // Viewの初期化
-    self.reloadAnalogView()
+    // TextFieldの初期化
+    self.reloadTextField()
   }
   
   @IBAction func selectAnalogFile(_ sender: NSButton) {
@@ -34,20 +34,12 @@ class AnalogViewController: NSViewController {
     case 4: analog.secondFilePath = url
     default: return
     }
-    // UIの更新
-    self.reloadAnalogView()
+    // TextFieldの更新
+    self.reloadTextField()
   }
 }
 
 extension AnalogViewController {
-  /// TextFieldの初期化・プレビューの描画
-  private func reloadAnalogView() {
-    // TextField
-    self.reloadTextField()
-    // プレビュー
-    self.reloadPreview()
-  }
-  
   /// TextFieldの初期化
   private func reloadTextField() {
     if let faceUrl = analog.faceFilePath {
@@ -62,10 +54,5 @@ extension AnalogViewController {
     if let secondUrl = analog.secondFilePath {
       secondFilePathTextField.stringValue = secondUrl.path
     }
-  }
-  
-  /// プレビューの初期化
-  private func reloadPreview() {
-
   }
 }

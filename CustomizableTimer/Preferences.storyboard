@@ -789,6 +789,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="408" height="148"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kj5-jx-Erx">
+                                <rect key="frame" x="0.0" y="0.0" width="408" height="148"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="aRz-uL-xdM"/>
+                            </imageView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HY3-kf-noi">
+                                <rect key="frame" x="0.0" y="0.0" width="408" height="148"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="3jq-Se-q2m"/>
+                            </imageView>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9hF-ai-pMU">
                                 <rect key="frame" x="0.0" y="0.0" width="408" height="148"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -809,22 +819,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="00X-xf-s0F"/>
                             </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HY3-kf-noi">
-                                <rect key="frame" x="0.0" y="0.0" width="408" height="148"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="3jq-Se-q2m"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kj5-jx-Erx">
-                                <rect key="frame" x="0.0" y="0.0" width="408" height="148"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="aRz-uL-xdM"/>
-                            </imageView>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="animation1ImageView" destination="HY3-kf-noi" id="itR-aW-CRO"/>
-                        <outlet property="animation2ImageView" destination="Kj5-jx-Erx" id="6Bh-xJ-VVi"/>
+                        <outlet property="backAnimationImageView" destination="Kj5-jx-Erx" id="Bjh-JK-fJ1"/>
                         <outlet property="faceImageView" destination="9hF-ai-pMU" id="bPa-RZ-ELK"/>
+                        <outlet property="frontAnimationImageView" destination="HY3-kf-noi" id="u9f-1u-Ni9"/>
                         <outlet property="hourImageView" destination="u0R-oF-Ky9" id="Qn2-GQ-fI5"/>
                         <outlet property="minuteImageView" destination="zsq-9E-1RF" id="5Rb-qW-UEo"/>
                         <outlet property="secondImageView" destination="7sL-6a-ZwY" id="Cpa-le-YW3"/>
