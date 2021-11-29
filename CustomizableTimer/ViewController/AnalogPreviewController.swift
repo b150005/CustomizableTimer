@@ -26,7 +26,7 @@ class AnalogPreviewController: NSViewController, SwiftyGifDelegate {
     super.viewDidLoad()
     self.frontAnimationImageView.delegate = self
     self.backAnimationImageView.delegate = self
-    }
+  }
   
   override func viewDidAppear() {
     // アニメーションのレイヤー階層の変更
@@ -46,7 +46,10 @@ class AnalogPreviewController: NSViewController, SwiftyGifDelegate {
       self.timer = nil
     }
   }
-  
+}
+
+extension AnalogPreviewController {
+  // MARK: - レイヤー
   /// アニメーションのレイヤー階層の変更
   private func setAnimationLayer() {
     if self.general.showAnimationInFront == true {
@@ -58,26 +61,18 @@ class AnalogPreviewController: NSViewController, SwiftyGifDelegate {
       self.frontAnimationImageView.layer?.zPosition = 0
     }
   }
-}
-
-extension AnalogPreviewController {
+  
   /// アナログ時計のプレビューの描画
   func reloadAnalogPreview() {
-    // アナログ時計
-    self.reloadClock()
-    // アニメーション
-    self.reloadAnimation()
+    // アナログ時計の画像ファイルの読込
+    self.reloadClockImage()
+    // アナログ時計の回転アニメーションの開始
+    self.startClockAnimation()
+    // 常に表示するアニメーションの読込
+    self.reloadAlwaysVisibleAnimation()
   }
   
   // MARK: - アナログ時計
-  /// アナログ時計の描画
-  private func reloadClock() {
-    // 画像ファイルの読込
-    self.reloadClockImage()
-    // 回転アニメーションの開始
-    self.startClockAnimation()
-  }
-  
   /// アナログ時計の画像ファイル(時計盤・短針・長針・秒針)の読込
   /// → 針は回転した状態で描画
   private func reloadClockImage() {
@@ -109,36 +104,32 @@ extension AnalogPreviewController {
   }
   
   // MARK: - アニメーション
-  /// アニメーションの描画
-  private func reloadAnimation() {
-    if self.general.showFrontAnimation == true {
+  /// 常に表示するアニメーションの描画
+  private func reloadAlwaysVisibleAnimation() {
+    // アニメーション(前面)
+    if self.general.showFrontAnimation == true && self.general.frontAnimationTiming == .always {
       if let url = self.general.frontAnimationFilePath {
-        switch self.general.frontAnimationTiming {
-        case .always:
-          self.frontAnimationImageView.setGifFromURL(url)
-        case .specified:
-          print("")
-        }
+        self.frontAnimationImageView.setGifFromURL(url)
       }
     }
     else {
-      // ImageViewの初期化
       self.frontAnimationImageView.clear()
     }
-    if self.general.showBackAnimation == true {
+    
+    // アニメーション(背面)
+    if self.general.showBackAnimation == true && self.general.backAnimationTiming == .always {
       if let url = self.general.backAnimationFilePath {
-        switch self.general.backAnimationTiming {
-        case .always:
-          self.backAnimationImageView.setGifFromURL(url)
-        case .specified:
-          print("")
-        }
+        self.backAnimationImageView.setGifFromURL(url)
       }
     }
     else {
-      // ImageViewの初期化
       self.backAnimationImageView.clear()
     }
+  }
+  
+  /// 指定時に表示するアニメーションのうち、最も現在時刻に近いものをセット
+  private func setLatestAnimationAndTimer() {
+    
   }
   
   /// AnimationTimingをもとにGIFアニメーションのループ回数を設定

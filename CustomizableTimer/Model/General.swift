@@ -142,28 +142,41 @@ class General {
   }
 }
 
-enum AnimationTiming: String {
-  case always = "常時"
-  case specified = "指定時"
-}
-
-extension UserDefaults {
-  /// `Date`オブジェクトをUserDefaultsから取得
-  func date(forKey key: String) -> Date {
-    let value = UserDefaults.standard.object(forKey: key)
-    guard let date = value as? Date else { return Date() }
-    return date
-  }
-  
-  /// `Enum`オブジェクトをUserDefaultsから取得
-  /// 実際に格納されているのはEnum.rawValue
-  func animationTiming(forKey key: String) -> AnimationTiming {
-    guard let rawValue = UserDefaults.standard.object(forKey: key) as? String else {
-      return AnimationTiming.always
+extension General {
+  /// 前面または背面に設定された指定時刻のうち、現在時刻に最も近い`Date`を返却
+  /// - Parameter showBack: 前面(false)または背面(true)
+  func getLatestShowTime(_ showBack: Bool) -> Date? {
+    let boolArray: [Bool] = [
+      self.showBackAtShowTime1 == showBack ? true : false,
+      self.showBackAtShowTime2 == showBack ? true : false,
+      self.showBackAtShowTime3 == showBack ? true : false,
+      self.showBackAtShowTime4 == showBack ? true : false,
+      self.showBackAtShowTime5 == showBack ? true : false,
+    ]
+    var dateArray: [Date] = [
+      self.animationShowTime1,
+      self.animationShowTime2,
+      self.animationShowTime3,
+      self.animationShowTime4,
+      self.animationShowTime5,
+    ]
+    
+    // showBackと等価でないDateを除外
+    let lastIndex: Int = boolArray.count - 1
+    for i in 0...lastIndex {
+      if boolArray[lastIndex - i] == false {
+        dateArray.remove(at: lastIndex - i)
+      }
     }
-    guard let animationTiming = AnimationTiming(rawValue: rawValue) else {
-      return AnimationTiming.always
+    // 現在時刻に満たないDateを除外+昇順ソート
+    let currentDate = Date()
+    dateArray = dateArray.filter{ $0 > currentDate }.sorted()
+    
+    // 要素数が0の場合はnilを返却
+    if dateArray.count == 0 {
+      return nil
     }
-    return animationTiming
+    
+    return dateArray.first
   }
 }
