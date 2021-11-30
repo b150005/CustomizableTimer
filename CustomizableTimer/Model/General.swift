@@ -146,6 +146,18 @@ extension General {
   /// 前面または背面に設定された指定時刻のうち、現在時刻に最も近い`Date`を返却
   /// - Parameter showBack: 前面(false)または背面(true)
   func getLatestShowTime(_ showBack: Bool) -> Date? {
+    // 常時表示 or 非表示 の場合はnilを返却
+    if showBack == false {
+      if self.frontAnimationTiming == .always || self.showFrontAnimation == false {
+        return nil
+      }
+    }
+    else {
+      if self.backAnimationTiming == .always || self.showBackAnimation == false {
+        return nil
+      }
+    }
+    
     let boolArray: [Bool] = [
       self.showBackAtShowTime1 == showBack ? true : false,
       self.showBackAtShowTime2 == showBack ? true : false,
@@ -176,7 +188,6 @@ extension General {
     if dateArray.count == 0 {
       return nil
     }
-    
     return dateArray.first
   }
 }

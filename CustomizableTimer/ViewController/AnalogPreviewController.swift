@@ -21,6 +21,7 @@ class AnalogPreviewController: NSViewController, SwiftyGifDelegate {
   let analog: Analog = Analog.shared
   
   var timer: Timer?
+  var showBackLatestAnimation: Bool = false
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -70,6 +71,8 @@ extension AnalogPreviewController {
     self.startClockAnimation()
     // 常に表示するアニメーションの読込
     self.reloadAlwaysVisibleAnimation()
+    // 指定時に表示するアニメーションの読込
+    self.setLatestAnimationAndTimer()
   }
   
   // MARK: - アナログ時計
@@ -129,7 +132,60 @@ extension AnalogPreviewController {
   
   /// 指定時に表示するアニメーションのうち、最も現在時刻に近いものをセット
   private func setLatestAnimationAndTimer() {
+    self.stopCurrentTimer()
     
+    if let dateFront = self.general.getLatestShowTime(false) {
+      if let dateBack = self.general.getLatestShowTime(true) {
+        // 前面・背面の両方が設定
+        // → 同時刻に前面・背面の両方で設定されている場合は前面に設定しているアニメーションが優先される
+        self.showBackLatestAnimation = dateFront > dateBack ? true : false
+        self.timer = Timer(
+          fireAt: self.showBackLatestAnimation ? dateBack : dateFront,
+          interval: 0,
+          target: self,
+          selector: #selector(self.showAnimationOnce),
+          userInfo: nil,
+          repeats: false)
+      }
+      // 前面のみ
+      else {
+        self.showBackLatestAnimation = false
+        self.timer = Timer(
+          fireAt: dateFront,
+          interval: 0,
+          target: self,
+          selector: #selector(self.showAnimationOnce),
+          userInfo: nil,
+          repeats: false)
+      }
+    }
+    else {
+      // 背面のみ
+      if let date = self.general.getLatestShowTime(true) {
+        self.showBackLatestAnimation = true
+        self.timer = Timer(
+          fireAt: date,
+          interval: 0,
+          target: self,
+          selector: #selector(self.showAnimationOnce),
+          userInfo: nil,
+          repeats: false)
+      }
+    }
+    
+    if let timer = self.timer {
+      RunLoop.main.add(timer, forMode: .common)
+    }
+  }
+  
+  /// アニメーションを1度だけ再生
+  @objc private func showAnimationOnce() {
+    if self.showBackLatestAnimation == false {
+      
+    }
+    else {
+      
+    }
   }
   
   /// AnimationTimingをもとにGIFアニメーションのループ回数を設定
