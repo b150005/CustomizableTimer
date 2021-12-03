@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BackAnimation" representedClassName="FrontAnimation" syncable="YES">
+        <attribute name="date1" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="date2" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="date3" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="date4" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="date5" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isAlways" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isDisplayed" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="url" optional="YES" attributeType="URI"/>
+    </entity>
+    <entity name="FrontAnimation" representedClassName="FrontAnimation" syncable="YES">
+        <attribute name="date1" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="date2" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="date3" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="date4" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="date5" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isAlways" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isDisplayed" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="url" optional="YES" attributeType="URI"/>
+    </entity>
+    <elements>
+        <element name="BackAnimation" positionX="-18" positionY="72" width="128" height="149"/>
+        <element name="FrontAnimation" positionX="-54" positionY="-9" width="128" height="149"/>
+    </elements>
+</model>

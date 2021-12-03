@@ -23,6 +23,30 @@ class AppDelegate: NSResponder, NSApplicationDelegate {
     return true
   }
   
+  // MARK: - Core Data stack
   
+  lazy var persistentContainer: NSPersistentContainer = {
+    let container = NSPersistentContainer(name: "CustomizableTimer")
+    container.loadPersistentStores(completionHandler: { (description, error) in
+      if let error = error {
+        fatalError("Failed to load Core Data stack: \(error)")
+      }
+    })
+    return container
+  }()
+  
+  // MARK: - Core Data Saving support
+  
+  func saveContext() {
+    let context = persistentContainer.viewContext
+    if context.hasChanges == true {
+      do {
+        try context.save()
+      }
+      catch {
+        print("Failed to save context: \(error)")
+      }
+    }
+  }
 }
 

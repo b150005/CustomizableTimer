@@ -11,6 +11,9 @@
 		47297B82274CF5AE002D8E00 /* SwiftyGif in Frameworks */ = {isa = PBXBuildFile; productRef = 47297B81274CF5AE002D8E00 /* SwiftyGif */; };
 		47297B88274CFCA3002D8E00 /* DraggableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47297B87274CFCA3002D8E00 /* DraggableImageView.swift */; };
 		47297B8A274E39F8002D8E00 /* AnalogPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47297B89274E39F8002D8E00 /* AnalogPreviewController.swift */; };
+		473198D42757A22000D4AF59 /* FrontAnimation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473198D22757A22000D4AF59 /* FrontAnimation+CoreDataClass.swift */; };
+		473198D52757A22000D4AF59 /* FrontAnimation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473198D32757A22000D4AF59 /* FrontAnimation+CoreDataProperties.swift */; };
+		473198D82757A38C00D4AF59 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473198D72757A38C00D4AF59 /* DataManager.swift */; };
 		475FCCD02746637B002A2C02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475FCCCF2746637B002A2C02 /* AppDelegate.swift */; };
 		475FCCD22746637B002A2C02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475FCCD12746637B002A2C02 /* ViewController.swift */; };
 		475FCCD42746637C002A2C02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 475FCCD32746637C002A2C02 /* Assets.xcassets */; };
@@ -29,6 +32,9 @@
 		47CF7433274FC88D00B8C2FC /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF7432274FC88D00B8C2FC /* NSImage.swift */; };
 		47CF7435274FD02200B8C2FC /* NSImageView+NSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF7434274FD02200B8C2FC /* NSImageView+NSView.swift */; };
 		47CF743727550B4A00B8C2FC /* UserDefaults+AnimationTiming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF743627550B4A00B8C2FC /* UserDefaults+AnimationTiming.swift */; };
+		47CF743A2757941000B8C2FC /* CustomizableTimer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 47CF74382757941000B8C2FC /* CustomizableTimer.xcdatamodeld */; };
+		47CF744C2757A12000B8C2FC /* BackAnimation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF74492757A12000B8C2FC /* BackAnimation+CoreDataProperties.swift */; };
+		47CF744E2757A17B00B8C2FC /* BackAnimation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF744D2757A17B00B8C2FC /* BackAnimation+CoreDataClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +58,9 @@
 		47297B7C274A2E95002D8E00 /* Digital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digital.swift; sourceTree = "<group>"; };
 		47297B87274CFCA3002D8E00 /* DraggableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableImageView.swift; sourceTree = "<group>"; };
 		47297B89274E39F8002D8E00 /* AnalogPreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogPreviewController.swift; sourceTree = "<group>"; };
+		473198D22757A22000D4AF59 /* FrontAnimation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FrontAnimation+CoreDataClass.swift"; sourceTree = "<group>"; };
+		473198D32757A22000D4AF59 /* FrontAnimation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FrontAnimation+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		473198D72757A38C00D4AF59 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		475FCCCC2746637B002A2C02 /* CustomizableTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomizableTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		475FCCCF2746637B002A2C02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		475FCCD12746637B002A2C02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +85,9 @@
 		47CF7432274FC88D00B8C2FC /* NSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImage.swift; sourceTree = "<group>"; };
 		47CF7434274FD02200B8C2FC /* NSImageView+NSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImageView+NSView.swift"; sourceTree = "<group>"; };
 		47CF743627550B4A00B8C2FC /* UserDefaults+AnimationTiming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+AnimationTiming.swift"; sourceTree = "<group>"; };
+		47CF74392757941000B8C2FC /* CustomizableTimer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CustomizableTimer.xcdatamodel; sourceTree = "<group>"; };
+		47CF74492757A12000B8C2FC /* BackAnimation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BackAnimation+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		47CF744D2757A17B00B8C2FC /* BackAnimation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BackAnimation+CoreDataClass.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +124,18 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		473198D62757A30500D4AF59 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				473198D72757A38C00D4AF59 /* DataManager.swift */,
+				473198D22757A22000D4AF59 /* FrontAnimation+CoreDataClass.swift */,
+				473198D32757A22000D4AF59 /* FrontAnimation+CoreDataProperties.swift */,
+				47CF744D2757A17B00B8C2FC /* BackAnimation+CoreDataClass.swift */,
+				47CF74492757A12000B8C2FC /* BackAnimation+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		475FCCC32746637B002A2C02 = {
 			isa = PBXGroup;
 			children = (
@@ -142,9 +166,11 @@
 				475FCCD52746637C002A2C02 /* Main.storyboard */,
 				475FCCFE27466B1E002A2C02 /* Preferences.storyboard */,
 				475FCCD82746637C002A2C02 /* CustomizableTimer.entitlements */,
+				473198D62757A30500D4AF59 /* CoreData */,
 				475FCCFD27466A23002A2C02 /* Model */,
 				47297B86274CFB73002D8E00 /* View */,
 				475FCCFB27466A0A002A2C02 /* ViewController */,
+				47CF74382757941000B8C2FC /* CustomizableTimer.xcdatamodeld */,
 			);
 			path = CustomizableTimer;
 			sourceTree = "<group>";
@@ -337,13 +363,19 @@
 				475FCD092746886D002A2C02 /* TabViewController.swift in Sources */,
 				475FCD0F2748C5F8002A2C02 /* Analog.swift in Sources */,
 				47297B7D274A2E95002D8E00 /* Digital.swift in Sources */,
+				47CF744C2757A12000B8C2FC /* BackAnimation+CoreDataProperties.swift in Sources */,
 				475FCD032746835E002A2C02 /* GeneralViewController.swift in Sources */,
 				475FCCD22746637B002A2C02 /* ViewController.swift in Sources */,
+				473198D82757A38C00D4AF59 /* DataManager.swift in Sources */,
+				47CF743A2757941000B8C2FC /* CustomizableTimer.xcdatamodeld in Sources */,
 				475FCD0527468370002A2C02 /* AnalogViewController.swift in Sources */,
 				47CF7433274FC88D00B8C2FC /* NSImage.swift in Sources */,
+				47CF744E2757A17B00B8C2FC /* BackAnimation+CoreDataClass.swift in Sources */,
 				47297B88274CFCA3002D8E00 /* DraggableImageView.swift in Sources */,
+				473198D42757A22000D4AF59 /* FrontAnimation+CoreDataClass.swift in Sources */,
 				475FCD0727468380002A2C02 /* DigitalViewController.swift in Sources */,
 				475FCD0B27489935002A2C02 /* General.swift in Sources */,
+				473198D52757A22000D4AF59 /* FrontAnimation+CoreDataProperties.swift in Sources */,
 				475FCCD02746637B002A2C02 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -726,6 +758,19 @@
 			productName = SwiftyGif;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		47CF74382757941000B8C2FC /* CustomizableTimer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				47CF74392757941000B8C2FC /* CustomizableTimer.xcdatamodel */,
+			);
+			currentVersion = 47CF74392757941000B8C2FC /* CustomizableTimer.xcdatamodel */;
+			path = CustomizableTimer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 475FCCC42746637B002A2C02 /* Project object */;
 }
